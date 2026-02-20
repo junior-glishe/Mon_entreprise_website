@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior – Designer & Développeur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#accueil" class="logo">
+                <span class="logo-icon">JK</span>
+                <span class="logo-text">Junior</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#services" class="nav-link">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#design-graphique">English Skills</a></li>
+                        <li><a href="#dev-web">Web Development</a></li>
+                        <li><a href="#dev-mobile">Mobile Development</a></li>
+                        <li><a href="#databases">Database & Backend</a></li>
+                        <li><a href="#maquette-figma">Figma & Balsamiq</a></li>
+                    </ul>
+                </li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#apropos" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE : ACCUEIL -->
+    <section class="hero-slider page-section" id="accueil" data-page="accueil">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg" alt="Design créatif">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <h1 class="slide-title">Developer & English Specialist</h1>
+                        <p class="slide-description">I transform your ideas into high-performance digital experiences, without language barriers.</p>
+                        <a href="#portfolio" class="btn btn-light"><span>Discover my work</span><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://i.pinimg.com/1200x/21/0c/22/210c22ae1d578cc50ad1b201fd7c9ef0.jpg" alt="Graphic Design Figma">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <h1 class="slide-title">Graphic Design & Figma</h1>
+                        <p class="slide-description">Creative and intuitive mockups to bring your digital ideas to life.</p>
+                        <a href="#services" class="btn btn-light">
+                            <span>Explore Services</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+            <img src="https://i.pinimg.com/1200x/20/0a/07/200a072465dc3c288a1d5780105705f7.jpg" alt="Web Development">
+            
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <h1 class="slide-title">Web Development</h1>
+                        <p class="slide-description">
+                            Building modern, responsive websites and web applications that perform flawlessly and engage users.
+                        </p>
+                        <a href="#contact" class="btn btn-light">
+                            <span>Hire Me</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn slider-prev" id="sliderPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn slider-next" id="sliderNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </section>
+
+    <section class="services-overview page-section" data-page="home">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">End-to-end digital solutions tailored to your needs.</p>
+        </div>
+        <div class="services-grid">
+           <a href="#english-skills" class="service-card">
+                <div class="service-icon"><i class="fas fa-language"></i></div>
+                <h3>English Skills</h3>
+                <p>Using English as a professional tool to collaborate, interpret, and support digital projects internationally</p>
+                <span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#dev-web" class="service-card">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Web Development</h3>
+                <p>Modern and high-performance websites, e-commerce platforms, and web apps</p>
+                <span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#dev-mobile" class="service-card">
+                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Mobile Development</h3>
+                <p>Native iOS and Android apps built with Flutter</p>
+                <span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#databases" class="service-card">
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <h3>Database & Backend</h3>
+                <p>Managing MySQL databases and building backend solutions with PHP & Laravel</p>
+                <span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#maquette-figma" class="service-card">
+                <div class="service-icon"><i class="fab fa-figma"></i></div>
+                <h3>UI/UX Mockups</h3>
+                <p>Professional UI/UX designs with Figma and Balsamiq for web and mobile projects</p>
+                <span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- PAGE : SERVICES -->
+    <section id="services" class="services-details page-section" data-page="services">
+        <div id="design-graphique" class="service-detail">
+            <div class="container">
+                <div class="service-content" id="english-skills">
+                    <div class="service-text" data-num="01">
+                        <span class="service-label"><i class="fas fa-pen-nib"></i> Service</span>
+                        <h2>English Skills</h2>
+                        <p class="lead">I use English as a professional communication tool to collaborate, interpret, and support digital projects internationally.</p>
+                        <ul class="feature-list">
+                            <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                                <div><strong>English Interpretation</strong> <span class="desc">– Clear and accurate communications</span></div>
+                            </li>
+                            <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                                <div><strong>Translation (French ↔ English)</strong> <span class="desc">– Professional written translation</span></div>
+                            </li>
+                            <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                                <div><strong>Technical English</strong> <span class="desc">– Interpreting and applying IT and digital concepts</span></div>
+                            </li>
+                            <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                                <div><strong>Fluent Speaking & Writing</strong> <span class="desc">– Clear verbal and written communication</span></div>
+                            </li>
+                        </ul>
+                        <div class="service-tech"><span class="tech-badge">Interpretation</span><span class="tech-badge">Translation</span><span class="tech-badge">Technical English</span><span class="tech-badge">Professional Communication</span></div>
+                    </div>
+                    <div class="service-gallery">
+                        <div class="gallery-item"><img src="https://i.pinimg.com/1200x/c6/a1/f3/c6a1f340bb46f9b358c26c875441933a.jpg" alt="Reading book"></div>
+                        <div class="gallery-item"><img src="https://i.pinimg.com/736x/99/d0/26/99d026b9dbe04b4891aeffe5a9e60420.jpg" alt="Reading book"></div>
+                        <div class="gallery-item"><img src="https://i.pinimg.com/736x/df/d1/0f/dfd10fef91a700390ad2c161e5b61ccb.jpg" alt="Reading book"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dev-web" class="service-detail alt-bg">
+            <div class="container">
+                <div class="service-content reverse">
+                    <div class="service-text" data-num="02">
+                        <span class="service-label"><i class="fas fa-laptop-code"></i> Service</span>
+                        <h2>Web Development</h2>
+                        <p class="lead">Modern, fast websites optimized to convert your visitors into customers.</p>
+                        <ul class="feature-list">
+                            <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                                <div><strong>Showcase Websites</strong> <span class="desc">– Professional online presence</span></div>
+                            </li>
+                            <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                                <div><strong>E-commerce</strong> <span class="desc">– High-performance online stores</span></div>
+                            </li>
+                            <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                                <div><strong>Web Applications</strong> <span class="desc">– Custom solutions</span></div>
+                            </li>
+                            <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                                <div><strong>Responsive Design</strong> <span class="desc">– Perfect on all devices</span></div>
+                            </li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-badge">HTML & CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Flutter Web</span>
+                            <span class="tech-badge">Django</span>
+                        </div>
+                    </div>
+                    <div class="service-gallery">
+                        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Web development"></div>
+                        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=400" alt="Coding"></div>
+                        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Web design"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dev-mobile" class="service-detail">
+            <div class="container">
+            <div class="service-content">
+                <div class="service-text" data-num="03">
+                    <span class="service-label"><i class="fas fa-mobile-alt"></i> Service</span>
+                    <h2>Mobile Development</h2>
+                    <p class="lead">High-performance native mobile applications for Android, delivering an exceptional user experience.</p>
+                    <ul class="feature-list">
+                        <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                            <div><strong>iOS & Android Apps</strong> <span class="desc">– Deployment on both platforms</span></div>
+                        </li>
+                        <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                            <div><strong>Optimized UI/UX</strong> <span class="desc">– Intuitive and modern interface</span></div>
+                        </li>
+                        <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                            <div><strong>Native Performance</strong> <span class="desc">– Fast and smooth experience</span></div>
+                        </li>
+                        <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                            <div><strong>Maintenance & Support</strong> <span class="desc">– Post-launch follow-up</span></div>
+                        </li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">React Native</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">REST API</span>
+                    </div>
+                </div>
+                <div class="service-gallery">
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600" alt="Mobile app"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400" alt="App development"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=400" alt="Mobile design"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+       <div id="databases" class="service-detail alt-bg">
+    <div class="container">
+        <div class="service-content reverse">
+            <div class="service-text" data-num="04">
+                <span class="service-label"><i class="fas fa-database"></i> Service</span>
+                <h2>Database & Backend Development</h2>
+                <p class="lead">Designing and managing MySQL databases and building backend solutions using PHP and Laravel for web applications.</p>
+                <ul class="feature-list">
+                    <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                        <div><strong>MySQL</strong> <span class="desc">– Relational database management</span></div>
+                    </li>
+                    <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                        <div><strong>PHP</strong> <span class="desc">– Server-side scripting and backend logic</span></div>
+                    </li>
+                    <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                        <div><strong>Laravel</strong> <span class="desc">– Modern PHP framework for web applications</span></div>
+                    </li>
+                </ul>
+                <div class="service-tech">
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">Laravel</span>
+                </div>
+            </div>
+            <div class="service-gallery">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600" alt="Database"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400" alt="Backend development"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400" alt="Web application backend"></div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <div id="figma-mockup" class="service-detail alt-bg">
+    <div class="container">
+        <div class="service-content reverse">
+            <div class="service-text" id="maquette-figma" data-num="05">
+                <span class="service-label"><i class="fab fa-figma"></i> Service</span>
+                <h2>UI/UX Mockup Design</h2>
+                <p class="lead">Creating professional UI/UX mockups that form a solid foundation for your digital projects.</p>
+                <ul class="feature-list">
+                    <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                        <div><strong>Wireframes & Prototypes</strong> <span class="desc">– Clear structure and navigation</span></div>
+                    </li>
+                    <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                        <div><strong>Design Systems</strong> <span class="desc">– Reusable components</span></div>
+                    </li>
+                    <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                        <div><strong>Mobile & Web</strong> <span class="desc">– Adapted to all devices</span></div>
+                    </li>
+                    <li><span class="feature-check"><i class="fas fa-check"></i></span>
+                        <div><strong>Interactive Prototypes</strong> <span class="desc">– Simulate final product experience</span></div>
+                    </li>
+                </ul>
+                <div class="service-tech">
+                    <span class="tech-badge">Figma</span>
+                    <span class="tech-badge">Balsamiq</span>
+                </div>
+            </div>
+            <div class="service-gallery">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=600" alt="Figma UI design"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400" alt="UI mockup"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=400" alt="Balsamiq wireframe"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- PAGE : PORTFOLIO -->
+    <section id="portfolio" class="portfolio page-section" data-page="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Découvrez une sélection de mes réalisations</p>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolioGrid">
+                
+                
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image"><img src="https://i.pinimg.com/736x/9f/8d/b6/9f8db62b92d1f585771e7e7163ac8b25.jpg" alt="App 1" loading="lazy">
+                        <div class="portfolio-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="portfolio-info"><span class="portfolio-tag">Site Web</span>
+                        <h3>Travel Agency Website</h3>
+                        <p>Responsive Tailwind CSS Website</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image"><img src="https://img.freepik.com/vecteurs-premium/banner-page-atterrissage-du-gymnase-du-site-web-modifiable_272430-264.jpg?semt=ais_hybrid&w=740&q=80" alt="App 2" loading="lazy">
+                        <div class="portfolio-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="portfolio-info"><span class="portfolio-tag">Site Web</span>
+                        <h3>Gym Landing Page  </h3>
+                        <p>leek & Responsive Corporate Site </p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image"><img src="https://i.pinimg.com/1200x/03/26/a9/0326a925dd0e9a63f270e4fb23547a87.jpg" alt="App 3" loading="lazy">
+                        <div class="portfolio-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="portfolio-info"><span class="portfolio-tag">Dashboard</span>
+                        <h3>Enterprise Dashboard  </h3>
+                        <p>Insightful Analytics & Data Visualization   </p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image"><img src="https://i.pinimg.com/1200x/4a/41/57/4a4157b3fb4dee4ae01693b233d1c66d.jpg" alt="App 4" loading="lazy">
+                        <div class="portfolio-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                   <div class="portfolio-info">
+                        <span class="portfolio-tag">Educational Platform</span>
+                        <h3>Educational & Delivery Platform</h3>
+                        <p>Responsive Websites with Intuitive Interface</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image"><img src="https://i.pinimg.com/736x/11/de/43/11de43e8b8cf404ba2b0cea43851da9a.jpg" alt="App 5" loading="lazy">
+                        <div class="portfolio-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Technology Lab</span>
+                        <h3>Technology Lab Website</h3>
+                        <p>Website showcasing technological experiments and innovations</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image"><img src="https://i.pinimg.com/1200x/61/e5/4e/61e54e73692ed05cdb9b48b09bee7e7d.jpg" alt="App 6" loading="lazy">
+                        <div class="portfolio-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                   <div class="portfolio-info">
+                        <span class="portfolio-tag">Cultural Website</span>
+                        <h3>Congo Culture Website</h3>
+                        <p>Website showcasing Congolese culture and heritage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE : À PROPOS -->
+    <section id="about" class="about page-section" data-page="about">
+    <div class="container" id="apropos">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="WhatsApp Image 2026-01-14 at 18.35.35.jpeg" alt="Junior Kouandzi">
+                <div class="about-decoration"></div>
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p class="lead">Developer and digital creator passionate about innovation and performance</p>
+                <p>My name is Junior Kouandzi, a professional specializing in web & mobile development, UI/UX design, and digital systems management.</p>
+                <p>My expertise includes creating impactful visual identities, developing modern web and mobile applications, and managing backend systems with PHP, MySQL, and Laravel.</p>
+                <p>Creative, dedicated, and efficient, I turn your ideas into concrete results.</p>
+                <div class="about-stats">
+                    <div class="stat"><span class="stat-number">5+</span><span class="stat-label">Projects Completed</span></div>
+                    <div class="stat"><span class="stat-number">6+</span><span class="stat-label">Areas of Expertise</span></div>
+                </div>
+                <div class="about-cta">
+                    <a href="#contact" class="btn btn-primary">Let’s Collaborate on Your Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </section>
+
+    
+
+    <!-- PAGE : CONTACT -->
+<section id="contact" class="contact page-section" data-page="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Let’s talk about your project</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Send Me a Message</h3>
+                <p>I’m available to discuss your projects and answer any questions you may have.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4><a href="mailto:carmelleservice@gmail.com">kouandzijunior1@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Porto-Novo, Benin</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/junior-kouandzi-3a67ab36b/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/junior-glishe" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://portofolio-junior.vercel.app/" class="social-link"><i class="fas fa-user"></i></a>
+     
+                </div>
+            </div>
+            <!-- Formulaire HTML -->
+            <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="from_name">Full Name</label>
+                <input type="text" id="name" name="from_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="from_email">Email</label>
+                <input type="email" id="email" name="from_email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="#home" class="footer-logo"><span class="logo-icon">JK</span><span>Junior</span></a>
+                <p>Full-Stack Developer & English Specialist</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://portofolio-junior.vercel.app/" class="social-link"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#english-skills">English Skills</a></li>
+                    <li><a href="#dev-web">Web Development</a></li>
+                    <li><a href="#dev-mobile">Mobile Development</a></li>
+                    <li><a href="#databases">Database & Backend</a></li>
+                    <li><a href="#maquette-figma">Figma & Balsamiq</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:kouandzijunior1@gmail.com">kouandzijunior1@gmail.com</a></li>
+                    <li>Porto-Novo, Benin</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Junior – All rights reserved</p>
+            <p><a href="#legal">Legal Notice</a></p>
+        </div>
+    </div>
+</footer>
+
+
+
+    
+   
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+<script src="email.js"></script>
+</body>
+
+</html>
